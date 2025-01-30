@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 2d62d4b2d3876a24fad9eecf2d7e4f3e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_hairballPrefab: {fileID: 8851860490789980211, guid: 503c578d523844345a0513c5b0e99fd7, type: 3}
+  - m_firepoint: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
