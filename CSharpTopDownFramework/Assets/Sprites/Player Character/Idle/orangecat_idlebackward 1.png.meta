@@ -198,7 +198,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      orangecat_idlebackward 1_0: 3473279645111429846
+      orangecat_idlebackward 1_1: 4239864202107337455
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

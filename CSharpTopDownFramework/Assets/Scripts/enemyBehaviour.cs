@@ -32,10 +32,6 @@ public class enemyBehaviour : MonoBehaviour
         {
             m_PlayerInSight = true;
         }
-        else if (collision.CompareTag("Hairball"))
-        {
-            Debug.Log("Hairball enter trigger yadadadadada");
-        }
     }
 
     private void OnTriggerExit2D (Collider2D collision)
