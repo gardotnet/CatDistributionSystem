@@ -13,7 +13,7 @@ public class enemyBehaviour : MonoBehaviour
 
     void Start()
     {
-        m_Player = FindObjectOfType<playerMovement>().transform;
+        m_Player = FindAnyObjectByType<playerMovement>().transform;
     }
 
     // Update is called once per frame
