@@ -21,7 +21,12 @@ public class enemyBehaviour : MonoBehaviour
     {
         if (m_PlayerInSight && Vector2.Distance(transform.position, m_Player.position) >= m_stoppingDistance)
         {
-            transform.position = Vector2.MoveTowards(transform.position, m_Player.position, m_speed * Time.deltaTime);
+            //transform.position = Vector2.MoveTowards(transform.position, m_Player.position, m_speed * Time.deltaTime);
+            GetComponent<Rigidbody2D>().linearVelocity = (m_Player.position - transform.position) * (m_speed * Time.deltaTime);
+        }
+        else
+        {
+            GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
         }
 
     }

@@ -23,7 +23,7 @@ public class menuManager : MonoBehaviour
     public void LoadLevel1()
     {
         //Can also use SceneManager.LoadScene(0); here
-        SceneManager.LoadScene("InteriorTutScene");
+        SceneManager.LoadScene("Interior Tutorial");
     }
 
     public void Quit()
