@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 
@@ -16,7 +17,7 @@ public class playerHealth : MonoBehaviour
     {
         if (healthAmount <= 0)
         {
-            // Application.LoadLevel(Application.loadedLevel);
+            SceneManager.LoadScene(1);
             Debug.Log("Level would restart here, make a screen for it");
         }
 
