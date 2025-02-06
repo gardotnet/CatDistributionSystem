@@ -1,4 +1,8 @@
+using System.Collections;
+using UnityEditorInternal;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class enemyBehaviour : MonoBehaviour
 {
@@ -9,10 +13,19 @@ public class enemyBehaviour : MonoBehaviour
     public float m_stoppingDistance;
     bool m_PlayerInSight = false;
 
+    [SerializeField] enemyHealthBar healthBar;
+    [SerializeField] float health, maxHealth = 3f;
+
     #endregion
 
-    void Start()
+    private void Awake()
     {
+        healthBar = GetComponentInChildren<enemyHealthBar>();
+    }
+
+    private void Start()
+    {
+        health = maxHealth;
         m_Player = FindAnyObjectByType<playerMovement>().transform;
     }
 
@@ -26,7 +39,6 @@ public class enemyBehaviour : MonoBehaviour
         {
             GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
         }
-
     }
 
     private void OnTriggerEnter2D (Collider2D collision) 
@@ -43,5 +55,20 @@ public class enemyBehaviour : MonoBehaviour
         {
             m_PlayerInSight = false;
         }
+    }
+
+    public void TakeDamage(float damageAmount)
+    {
+        health -= damageAmount;
+        healthBar.UpdateHealthBar(health, maxHealth);
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Destroy(gameObject);
     }
 }

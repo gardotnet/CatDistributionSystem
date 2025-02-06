@@ -11,6 +11,13 @@ public class projectileBehaviour : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if (collision.gameObject.TryGetComponent<enemyBehaviour> (out enemyBehaviour enemyComponent))
+        {
+            enemyComponent.TakeDamage(1);
+        }
+
+        Destroy(gameObject);
     }
     void Start()
     {

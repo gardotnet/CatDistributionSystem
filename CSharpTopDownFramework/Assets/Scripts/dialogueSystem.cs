@@ -9,6 +9,7 @@ public class dialogueSystem : MonoBehaviour
     public float textSpeed;
 
     private int index;
+    private bool dialogueBoxActive = false;
 
     void Start()
     {
@@ -18,16 +19,24 @@ public class dialogueSystem : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("e"))
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("Hey, e is getting pressed!");
+            dialogueBoxActive = true;
+            gameObject.SetActive(true);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (textComponent.text == lines[index])
             {
                 NextLine();
-            } else {
+            }
+            else
+            {
                 StopAllCoroutines();
                 textComponent.text = lines[index];
             }
-
         }
     }
 
