@@ -26,6 +26,7 @@ public class enemyBehaviour : MonoBehaviour
     private void Start()
     {
         health = maxHealth;
+
         m_Player = FindAnyObjectByType<playerMovement>().transform;
     }
 
@@ -61,6 +62,7 @@ public class enemyBehaviour : MonoBehaviour
     {
         health -= damageAmount;
         healthBar.UpdateHealthBar(health, maxHealth);
+
         if (health <= 0)
         {
             Die();

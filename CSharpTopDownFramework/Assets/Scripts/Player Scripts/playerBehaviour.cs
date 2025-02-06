@@ -33,6 +33,7 @@ public class playerBehaviour : MonoBehaviour
     {
         if (m_attackAction.IsPressed() && Time.time > m_fireTimeout)
         {
+            Debug.Log("Yo dis still works");
             m_fireTimeout = Time.time + m_fireRate;
             Fire();
         }
@@ -42,6 +43,7 @@ public class playerBehaviour : MonoBehaviour
 
     void Fire()
     {
+        Debug.Log("Firing...");
         // Get the mouse position on the screen and convert it to world position
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 

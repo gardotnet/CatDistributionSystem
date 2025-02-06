@@ -12,20 +12,25 @@ public class projectileBehaviour : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (collision.gameObject.TryGetComponent<enemyBehaviour> (out enemyBehaviour enemyComponent))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            enemyComponent.TakeDamage(1);
-        }
+            enemyBehaviour enemyComponent = collision.transform.GetComponentInParent<enemyBehaviour>();
 
-        Destroy(gameObject);
+            if (enemyComponent != null)
+            {
+                enemyComponent.TakeDamage(1);
+                Destroy(gameObject);
+            }
+        }
     }
+
     void Start()
     {
         GameObject projectileOrigin = GameObject.FindWithTag("Player");
         Collider2D projectileoriginCollider = projectileOrigin.GetComponent<Collider2D>();
         Physics2D.IgnoreCollision(GetComponent<Collider2D>(), projectileoriginCollider);
 
-        Destroy(gameObject, 1.0f);
+        Destroy(gameObject, 2.0f);
     }
 
     private void OnBecameInvisible()
