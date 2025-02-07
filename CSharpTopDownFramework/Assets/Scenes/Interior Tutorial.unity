@@ -1011,6 +1011,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: Exterior Level
+  playerPosition: {x: 1.497, y: -0.32}
+  playerStorage: {fileID: 11400000, guid: 556c08a7fcf7b9c4fa995e84ff9d739d, type: 2}
 --- !u!1 &655477455
 GameObject:
   m_ObjectHideFlags: 0
