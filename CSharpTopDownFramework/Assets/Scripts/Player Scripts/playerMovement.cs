@@ -20,6 +20,9 @@ public class playerMovement : MonoBehaviour
     
     //The direction that the player is moving in.
     private Vector2 m_playerDirection;
+
+    //Reference to Teleport value
+    public VectorValue startingPosition;
    
 
     [Header("Movement parameters")]
@@ -48,7 +51,7 @@ public class playerMovement : MonoBehaviour
     /// </summary>
     void Start()
     {
-        
+        transform.position = startingPosition.initialValue;
     }
 
     /// <summary>

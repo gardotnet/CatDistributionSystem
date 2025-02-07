@@ -1,4 +1,4 @@
-using UnityEngine;
+ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class sceneTransition : MonoBehaviour
@@ -7,9 +7,9 @@ public class sceneTransition : MonoBehaviour
     public Vector2 playerPosition;
     public VectorValue playerStorage;
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.CompareTag("Player") && !collision.isTrigger)
+        if (other.CompareTag("Player") && !other.isTrigger)
         {
             playerStorage.initialValue = playerPosition;
             SceneManager.LoadScene(sceneToLoad);
