@@ -17,8 +17,7 @@ public class playerHealth : MonoBehaviour
     {
         if (healthAmount <= 0)
         {
-            SceneManager.LoadScene(1);
-            Debug.Log("Level would restart here, make a screen for it");
+            SceneManager.LoadScene(3);
         }
 
         if (enemyContact && canTakeDamage)
