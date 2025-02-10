@@ -4,7 +4,7 @@ public class projectileBehaviour : MonoBehaviour
 {
     public GameObject projectilePrefab;
     public GameObject Enemy;
-    private AudioSource hairballpop;
+    private AudioSource swoop;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -30,9 +30,9 @@ public class projectileBehaviour : MonoBehaviour
         GameObject projectileOrigin = GameObject.FindWithTag("Player");
         Collider2D projectileoriginCollider = projectileOrigin.GetComponent<Collider2D>();
         Physics2D.IgnoreCollision(GetComponent<Collider2D>(), projectileoriginCollider);
-
-        hairballpop = GetComponent<AudioSource>();
-        hairballpop.Play();
+;
+        swoop = GetComponent<AudioSource>();s
+        swoop.Play();
 
         Destroy(gameObject, 2.0f);
     }

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -6377666948506907649}
   - component: {fileID: -5693908840118529789}
   - component: {fileID: -6697591577533841775}
-  - component: {fileID: 4345479892041221825}
+  - component: {fileID: -5128723008163048181}
   m_Layer: 0
   m_Name: projectile
   m_TagString: Hairball
@@ -308,7 +308,7 @@ TrailRenderer:
   m_Autodestruct: 1
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
---- !u!82 &4345479892041221825
+--- !u!82 &-5128723008163048181
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -318,8 +318,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e9c74cc3f6a701f4bbce38a5b702157c, type: 3}
-  m_Resource: {fileID: 8300000, guid: e9c74cc3f6a701f4bbce38a5b702157c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a0e3686fd2d3f8b4f8695866e1eda623, type: 3}
+  m_Resource: {fileID: 8300000, guid: a0e3686fd2d3f8b4f8695866e1eda623, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -395,7 +395,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1.1
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
