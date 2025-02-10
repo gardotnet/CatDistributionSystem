@@ -31,7 +31,7 @@ public class projectileBehaviour : MonoBehaviour
         Collider2D projectileoriginCollider = projectileOrigin.GetComponent<Collider2D>();
         Physics2D.IgnoreCollision(GetComponent<Collider2D>(), projectileoriginCollider);
 ;
-        swoop = GetComponent<AudioSource>();s
+        swoop = GetComponent<AudioSource>();
         swoop.Play();
 
         Destroy(gameObject, 2.0f);
