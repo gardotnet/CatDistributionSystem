@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 /// </summary>
 public class playerMovement : MonoBehaviour
 {
-    #region Framework Variables
+    #region Variables
 
     //The inputs that we need to retrieve from the input system.
     private InputAction m_moveAction;
@@ -23,6 +23,12 @@ public class playerMovement : MonoBehaviour
 
     //Reference to Teleport value
     public VectorValue startingPosition;
+
+    //Reference to walkingSFX
+    private AudioSource walkingsfx;
+
+    //Make sure walkingSFX doesn't spam play
+    private bool canHearWalking = false;
    
 
     [Header("Movement parameters")]
@@ -52,6 +58,7 @@ public class playerMovement : MonoBehaviour
     void Start()
     {
         transform.position = startingPosition.initialValue;
+        walkingsfx = GetComponent<AudioSource>();
     }
 
     /// <summary>
@@ -66,7 +73,7 @@ public class playerMovement : MonoBehaviour
         //apply the movement to the character using the clamped speed value.
         m_rigidbody.linearVelocity = m_playerDirection * (speed * Time.fixedDeltaTime);
     }
-    
+
     /// <summary>
     /// When the update loop is called, it runs every frame.
     /// Therefore, this will run more or less frequently depending on performance.
@@ -76,16 +83,31 @@ public class playerMovement : MonoBehaviour
     {
         // store any movement inputs into m_playerDirection - this will be used in FixedUpdate to move the player.
         m_playerDirection = m_moveAction.ReadValue<Vector2>();
-        
+
         // ~~ handle animator ~~
         // Update the animator speed to ensure that we revert to idle if the player doesn't move.
         m_animator.SetFloat("Speed", m_playerDirection.magnitude);
-        
+
         // If there is movement, set the directional values to ensure the character is facing the way they are moving.
         if (m_playerDirection.magnitude > 0)
         {
             m_animator.SetFloat("Horizontal", m_playerDirection.x);
             m_animator.SetFloat("Vertical", m_playerDirection.y);
+        }
+
+        if (m_moveAction.IsPressed())
+        {
+            while (!walkingsfx.isPlaying)
+            {
+                canHearWalking = true;
+                walkingsfx.Play();
+                canHearWalking = false;
+            }
+        }
+
+        if (!canHearWalking)
+        {
+            walkingsfx.Stop();
         }
     }
 }
