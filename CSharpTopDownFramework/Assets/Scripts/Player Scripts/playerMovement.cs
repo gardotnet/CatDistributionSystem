@@ -28,7 +28,7 @@ public class playerMovement : MonoBehaviour
     private AudioSource walkingsfx;
 
     //Make sure walkingSFX doesn't spam play
-    private bool canHearWalking = false;
+    private bool canHearWalking;
    
 
     [Header("Movement parameters")]
@@ -99,13 +99,10 @@ public class playerMovement : MonoBehaviour
         {
             while (!walkingsfx.isPlaying)
             {
-                canHearWalking = true;
                 walkingsfx.Play();
                 canHearWalking = false;
             }
-        }
-
-        if (!canHearWalking)
+        } else
         {
             walkingsfx.Stop();
         }
