@@ -13139,6 +13139,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 375741778160764838, guid: 3a489e3a13f45c54494d46669e147728, type: 3}
+      propertyPath: BombayFriend
+      value: 
+      objectReference: {fileID: 1103929686726130753, guid: 2744ec999771a344d88c8c0433e96f03, type: 3}
     - target: {fileID: 3092036735502131613, guid: 3a489e3a13f45c54494d46669e147728, type: 3}
       propertyPath: m_Name
       value: Enemy Vision

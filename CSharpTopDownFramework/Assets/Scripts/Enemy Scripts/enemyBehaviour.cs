@@ -14,12 +14,14 @@ public class enemyBehaviour : MonoBehaviour
     public float m_stoppingDistance;
     bool m_PlayerInSight = false;
 
+    [Header("Health")]
     [SerializeField] enemyHealthBar healthBar;
     [SerializeField] float health, maxHealth = 3f;
 
-    GameObject Friend;
+    [Header("Swappable Friends")]
+    [SerializeField] GameObject BombayFriend;
 
-    public event Action<bool> OnEnemyDeath;
+    private event Action<bool> OnEnemyDeath;
     public Transform enemyLocation;
 
     #endregion
@@ -77,7 +79,7 @@ public class enemyBehaviour : MonoBehaviour
 
     void Die()
     {
-        OnEnemyDeath.Invoke(Instantiate(Friend, gameObject.transform.position, Quaternion.identity));
+        OnEnemyDeath.Invoke(Instantiate(BombayFriend, gameObject.transform.position, Quaternion.identity));
 
         gameObject.SetActive(false);
     }
