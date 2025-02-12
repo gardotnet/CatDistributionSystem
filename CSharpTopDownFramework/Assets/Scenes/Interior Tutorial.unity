@@ -13037,6 +13037,18 @@ PrefabInstance:
       propertyPath: startingPosition
       value: 
       objectReference: {fileID: 11400000, guid: 556c08a7fcf7b9c4fa995e84ff9d739d, type: 2}
+    - target: {fileID: 4082920122241333141, guid: f6e4a9a7b4f122b4e82da05a039a69d1, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 21f7eededa631984fae7a5344ef85e75, type: 3}
+    - target: {fileID: 4082920122241333141, guid: f6e4a9a7b4f122b4e82da05a039a69d1, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 21f7eededa631984fae7a5344ef85e75, type: 3}
+    - target: {fileID: 4082920122241333141, guid: f6e4a9a7b4f122b4e82da05a039a69d1, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4178463699276938616, guid: f6e4a9a7b4f122b4e82da05a039a69d1, type: 3}
       propertyPath: m_fireRate
       value: 0.3
@@ -13093,6 +13105,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7001547151669479105, guid: f6e4a9a7b4f122b4e82da05a039a69d1, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7001547151669479105, guid: f6e4a9a7b4f122b4e82da05a039a69d1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5359179167312821939, guid: f6e4a9a7b4f122b4e82da05a039a69d1, type: 3}
     m_RemovedGameObjects: []
@@ -13121,11 +13141,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8470753233446732815, guid: 3a489e3a13f45c54494d46669e147728, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.75
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8470753233446732815, guid: 3a489e3a13f45c54494d46669e147728, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.52
+      value: 0.11
       objectReference: {fileID: 0}
     - target: {fileID: 8470753233446732815, guid: 3a489e3a13f45c54494d46669e147728, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13238,8 +13258,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1586818249}
-  - {fileID: 1767499851}
   - {fileID: 32517678419723971}
+  - {fileID: 1767499851}
   - {fileID: 1547131234618924934}
   - {fileID: 1448457437}
   - {fileID: 4545211253731829455}

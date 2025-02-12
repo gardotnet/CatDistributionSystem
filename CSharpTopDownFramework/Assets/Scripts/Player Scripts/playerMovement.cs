@@ -95,14 +95,11 @@ public class playerMovement : MonoBehaviour
             m_animator.SetFloat("Vertical", m_playerDirection.y);
         }
 
-        if (m_moveAction.IsPressed())
+        if (m_moveAction.IsPressed() && !walkingsfx.isPlaying)
         {
-            while (!walkingsfx.isPlaying)
-            {
-                walkingsfx.Play();
-                canHearWalking = false;
-            }
-        } else
+            walkingsfx.Play();
+        }
+        else if (!m_moveAction.IsPressed() && walkingsfx.isPlaying)
         {
             walkingsfx.Stop();
         }

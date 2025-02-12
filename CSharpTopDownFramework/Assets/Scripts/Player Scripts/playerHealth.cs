@@ -6,12 +6,18 @@ using System.Collections;
 public class playerHealth : MonoBehaviour
 {
     public Image healthBar;
+    private AudioSource playerdamaged;
 
     [SerializeField] public float healthAmount;
     [SerializeField] public float damageDelay;
 
     bool enemyContact = false;
     bool canTakeDamage = true;
+
+    void Start()
+    {
+        playerdamaged = GetComponent<AudioSource>();
+    }
 
     private void Update()
     {
@@ -44,8 +50,14 @@ public class playerHealth : MonoBehaviour
 
     public void TakeDamage(float damagePoints)
     {
+        Debug.Log("Damaged");
         healthAmount -= damagePoints;
         healthBar.fillAmount = healthAmount / 100;
+
+        if (playerdamaged != null && !playerdamaged.isPlaying)
+        {
+            playerdamaged.Play();
+        }
     }
 
     public void Healing(float healthPoints)
