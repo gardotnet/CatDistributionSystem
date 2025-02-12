@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 6106776945404568459}
   - component: {fileID: 9070368715061509777}
   - component: {fileID: -6377666948506907649}
-  - component: {fileID: -5693908840118529789}
   - component: {fileID: -6697591577533841775}
   - component: {fileID: -5128723008163048181}
+  - component: {fileID: -5693908840118529789}
   m_Layer: 0
   m_Name: projectile
   m_TagString: Hairball
@@ -178,20 +178,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-5693908840118529789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8851860490789980211}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3df24640d32fe04487731f7009ae46d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 0}
-  Enemy: {fileID: 0}
 --- !u!96 &-6697591577533841775
 TrailRenderer:
   serializedVersion: 3
@@ -405,3 +391,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-5693908840118529789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8851860490789980211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3df24640d32fe04487731f7009ae46d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 0}
+  Enemy: {fileID: 0}

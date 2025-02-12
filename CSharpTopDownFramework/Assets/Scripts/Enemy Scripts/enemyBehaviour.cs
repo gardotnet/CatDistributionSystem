@@ -1,7 +1,8 @@
-using System.Collections;
+using System;
 using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 
 public class enemyBehaviour : MonoBehaviour
@@ -16,7 +17,10 @@ public class enemyBehaviour : MonoBehaviour
     [SerializeField] enemyHealthBar healthBar;
     [SerializeField] float health, maxHealth = 3f;
 
-    public characterSwapper characterSwapper;
+    GameObject Friend;
+
+    public event Action<bool> OnEnemyDeath;
+    public Transform enemyLocation;
 
     #endregion
 
@@ -73,11 +77,8 @@ public class enemyBehaviour : MonoBehaviour
 
     void Die()
     {
-        if (characterSwapper != null)
-        {
-            characterSwapper.OnHealthZero();
-        }
+        OnEnemyDeath.Invoke(Instantiate(Friend, gameObject.transform.position, Quaternion.identity));
 
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }
