@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 
 /// <summary>
 /// A class to control the top down character.
@@ -47,6 +48,12 @@ public class playerMovement : MonoBehaviour
     {
         m_moveAction = InputSystem.actions.FindAction("Move");
         m_attackAction = InputSystem.actions.FindAction("Attack");
+
+        m_moveAction.performed += OnMove;
+        m_moveAction.canceled += StopMove;
+        //m_attackAction.performed += OnAttack;
+
+
         //get components from Character game object so that we can use them later.
         m_animator = GetComponent<Animator>();
         m_rigidbody = GetComponent<Rigidbody2D>();
@@ -74,26 +81,36 @@ public class playerMovement : MonoBehaviour
         m_rigidbody.linearVelocity = m_playerDirection * (speed * Time.fixedDeltaTime);
     }
 
-    /// <summary>
-    /// When the update loop is called, it runs every frame.
-    /// Therefore, this will run more or less frequently depending on performance.
-    /// Used to catch changes in variables or input.
-    /// </summary>
-    void Update()
+    #region Movement Handler Functions
+    
+    public void OnMove(InputAction.CallbackContext context)
     {
-        // store any movement inputs into m_playerDirection - this will be used in FixedUpdate to move the player.
-        m_playerDirection = m_moveAction.ReadValue<Vector2>();
+        m_playerDirection = context.ReadValue<Vector2>();
 
-        // ~~ handle animator ~~
-        // Update the animator speed to ensure that we revert to idle if the player doesn't move.
+        HandleAnimOnMove();
+    }
+
+    public void StopMove(InputAction.CallbackContext context)
+    {
+        m_playerDirection = Vector2.zero;
+
+        HandleAnimOnMove();
+    }
+
+    private void HandleAnimOnMove()
+    {
         m_animator.SetFloat("Speed", m_playerDirection.magnitude);
 
-        // If there is movement, set the directional values to ensure the character is facing the way they are moving.
         if (m_playerDirection.magnitude > 0)
         {
             m_animator.SetFloat("Horizontal", m_playerDirection.x);
             m_animator.SetFloat("Vertical", m_playerDirection.y);
         }
+    }
+
+    #endregion
+    void Update()
+    {
 
         if (m_moveAction.IsPressed() && !walkingsfx.isPlaying)
         {
