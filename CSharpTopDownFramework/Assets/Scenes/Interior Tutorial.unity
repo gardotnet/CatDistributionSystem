@@ -13034,17 +13034,29 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1379873740131471555, guid: f6e4a9a7b4f122b4e82da05a039a69d1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1379873740131471555, guid: f6e4a9a7b4f122b4e82da05a039a69d1, type: 3}
       propertyPath: startingPosition
       value: 
       objectReference: {fileID: 11400000, guid: 556c08a7fcf7b9c4fa995e84ff9d739d, type: 2}
     - target: {fileID: 4082920122241333141, guid: f6e4a9a7b4f122b4e82da05a039a69d1, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082920122241333141, guid: f6e4a9a7b4f122b4e82da05a039a69d1, type: 3}
+      propertyPath: Priority
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082920122241333141, guid: f6e4a9a7b4f122b4e82da05a039a69d1, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 21f7eededa631984fae7a5344ef85e75, type: 3}
+      objectReference: {fileID: 8300000, guid: 0ee5e1ab7c77af9468a980f565a91eda, type: 3}
     - target: {fileID: 4082920122241333141, guid: f6e4a9a7b4f122b4e82da05a039a69d1, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 21f7eededa631984fae7a5344ef85e75, type: 3}
+      objectReference: {fileID: 8300000, guid: 0ee5e1ab7c77af9468a980f565a91eda, type: 3}
     - target: {fileID: 4082920122241333141, guid: f6e4a9a7b4f122b4e82da05a039a69d1, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
@@ -13141,7 +13153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8470753233446732815, guid: 3a489e3a13f45c54494d46669e147728, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 1.77
       objectReference: {fileID: 0}
     - target: {fileID: 8470753233446732815, guid: 3a489e3a13f45c54494d46669e147728, type: 3}
       propertyPath: m_LocalPosition.y

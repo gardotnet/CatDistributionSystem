@@ -6,7 +6,7 @@ using System.Collections;
 public class playerHealth : MonoBehaviour
 {
     public Image healthBar;
-    private AudioSource playerdamaged;
+    private AudioSource playerdamagedsfx;
 
     [SerializeField] public float healthAmount;
     [SerializeField] public float damageDelay;
@@ -16,7 +16,7 @@ public class playerHealth : MonoBehaviour
 
     void Start()
     {
-        playerdamaged = GetComponent<AudioSource>();
+        playerdamagedsfx = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -54,12 +54,13 @@ public class playerHealth : MonoBehaviour
         healthAmount -= damagePoints;
         healthBar.fillAmount = healthAmount / 100;
 
-        if (playerdamaged != null && !playerdamaged.isPlaying)
+        if (playerdamagedsfx != null && !playerdamagedsfx.isPlaying)
         {
-            playerdamaged.Play();
+            playerdamagedsfx.Play();
         }
     }
 
+    //This doesn't get used anywhere, but still nice to have
     public void Healing(float healthPoints)
     {
         healthAmount += healthPoints;
