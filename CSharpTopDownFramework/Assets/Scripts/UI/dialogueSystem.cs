@@ -2,68 +2,70 @@ using UnityEngine;
 using System.Collections;
 using TMPro;
 
-public class dialogueSystem : MonoBehaviour
+public class DialogueSystem : MonoBehaviour
 {
+    [Header ("Components")]
+    public GameObject dialogueBox;
+    public GameObject dialogueLines;
     public TextMeshProUGUI textComponent;
-    public string[] lines;
     public float textSpeed;
 
-    private int index;
-    private bool dialogueBoxActive = false;
+    public string[] lines;
+
+    private int index = 0;
+    private bool isTyping = false;
 
     void Start()
     {
+        dialogueBox.GetComponent<CanvasRenderer>().SetAlpha(0f);
+        dialogueLines.GetComponent<CanvasRenderer>().SetAlpha(0f);
         textComponent.text = string.Empty;
-        StartDialogue();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Debug.Log("Hey, e is getting pressed!");
-            dialogueBoxActive = true;
-            gameObject.SetActive(true);
-        }
+        if (Input.GetKeyDown(KeyCode.E)) HandleDialogue();
+    }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+    void HandleDialogue()
+    {
+        if (dialogueBox.GetComponent<CanvasRenderer>().GetAlpha() == 0f)
         {
-            if (textComponent.text == lines[index])
+            dialogueBox.GetComponent<CanvasRenderer>().SetAlpha(1f);
+            dialogueLines.GetComponent<CanvasRenderer>().SetAlpha(1f);
+            StartCoroutine(TypeLine());
+        }
+        else if (!isTyping)
+        {
+            if (index < lines.Length - 1)
             {
-                NextLine();
+                index++;
+                StartCoroutine(TypeLine());
             }
             else
             {
-                StopAllCoroutines();
-                textComponent.text = lines[index];
+                CloseDialogue();
             }
         }
-    }
-
-    void StartDialogue()
-    {
-        index = 0;
-        StartCoroutine(TypeLine());
     }
 
     IEnumerator TypeLine()
     {
-        foreach (char c in lines[index].ToCharArray())
+        isTyping = true;
+        textComponent.text = string.Empty;
+
+        foreach (char letter in lines[index].ToCharArray())
         {
-            textComponent.text += c;
+            textComponent.text += letter;
             yield return new WaitForSeconds(textSpeed);
         }
+
+        isTyping = false;
     }
 
-    void NextLine()
+    void CloseDialogue()
     {
-        if (index < lines.Length - 1)
-        {
-            index++;
-            textComponent.text = string.Empty;
-            StartCoroutine(TypeLine());
-        } else {
-            gameObject.SetActive(false);
-        }
+        dialogueBox.GetComponent<CanvasRenderer>().SetAlpha(0f);
+        dialogueLines.GetComponent<CanvasRenderer>().SetAlpha(0f);
     }
 }

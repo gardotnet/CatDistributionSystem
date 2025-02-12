@@ -18,8 +18,11 @@ public class enemyBehaviour : MonoBehaviour
     [SerializeField] enemyHealthBar healthBar;
     [SerializeField] float health, maxHealth = 3f;
 
-    [Header("Swappable Friends")]
-    [SerializeField] GameObject BombayFriend;
+    [Header("Friend Variations")]
+    [SerializeField] GameObject CalicoFriend;
+    //[SerializeField] GameObject GingerFriend;
+    //[SerializeField] GameObject BombayFriend;
+    //public string[] Variations; -> figure out how to list and use the different variations (listed above) interchangeably
 
     private event Action<bool> OnEnemyDeath;
     public Transform enemyLocation;
@@ -79,7 +82,7 @@ public class enemyBehaviour : MonoBehaviour
 
     void Die()
     {
-        OnEnemyDeath.Invoke(Instantiate(BombayFriend, gameObject.transform.position, Quaternion.identity));
+        OnEnemyDeath.Invoke(Instantiate(CalicoFriend, gameObject.transform.position, Quaternion.identity));
 
         gameObject.SetActive(false);
     }

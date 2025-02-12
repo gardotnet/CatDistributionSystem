@@ -7023,7 +7023,7 @@ GameObject:
   - component: {fileID: 1710686539}
   - component: {fileID: 1710686538}
   m_Layer: 5
-  m_Name: Dialogue Lines
+  m_Name: DialogueLines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12886,6 +12886,7 @@ GameObject:
   - component: {fileID: 2036061266}
   - component: {fileID: 2036061265}
   - component: {fileID: 2036061267}
+  - component: {fileID: 2036061268}
   m_Layer: 5
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -12905,6 +12906,7 @@ RectTransform:
   m_LocalScale: {x: 0.84095407, y: 0.3096144, z: 0.27522}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2054421314}
   - {fileID: 1710686537}
   m_Father: {fileID: 1767499851}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12963,11 +12965,110 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 544e69467577998449e97bd99a27714c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueBox: {fileID: 2036061263}
+  dialogueLines: {fileID: 1710686536}
   textComponent: {fileID: 1710686538}
+  textSpeed: 0.02
   lines:
   - Ah, weary traveller!
   - May I tempt you for some spell scrolls?
-  textSpeed: 0.1
+--- !u!95 &2036061268
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036061263}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 43f68761d949e6646bd53577da1092e3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &2054421313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2054421314}
+  - component: {fileID: 2054421316}
+  - component: {fileID: 2054421315}
+  m_Layer: 0
+  m_Name: DialoguePortrait
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2054421314
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054421313}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -21627.535}
+  m_LocalScale: {x: 79.37413, y: 215.59074, z: 242.53323}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2036061264}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -211.43, y: -1.76}
+  m_SizeDelta: {x: 0.91, y: 0.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2054421315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054421313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 8216464791552771711, guid: 3a71968349a4ef748b2640e1b8165452, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2054421316
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054421313}
+  m_CullTransparentMesh: 1
 --- !u!1001 &32517678419723971
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13143,6 +13244,18 @@ PrefabInstance:
       propertyPath: BombayFriend
       value: 
       objectReference: {fileID: 1103929686726130753, guid: 2744ec999771a344d88c8c0433e96f03, type: 3}
+    - target: {fileID: 375741778160764838, guid: 3a489e3a13f45c54494d46669e147728, type: 3}
+      propertyPath: CalicoFriend
+      value: 
+      objectReference: {fileID: 4727162256879165715, guid: fb46d1a111bc8b5488f04ad9abe761ee, type: 3}
+    - target: {fileID: 375741778160764838, guid: 3a489e3a13f45c54494d46669e147728, type: 3}
+      propertyPath: GingerFriend
+      value: 
+      objectReference: {fileID: 6667918874545502139, guid: b3aa84facece2284187d4012a34ce055, type: 3}
+    - target: {fileID: 375741778160764838, guid: 3a489e3a13f45c54494d46669e147728, type: 3}
+      propertyPath: lines.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3092036735502131613, guid: 3a489e3a13f45c54494d46669e147728, type: 3}
       propertyPath: m_Name
       value: Enemy Vision
