@@ -16,6 +16,8 @@ public class enemyBehaviour : MonoBehaviour
     [SerializeField] enemyHealthBar healthBar;
     [SerializeField] float health, maxHealth = 3f;
 
+    public characterSwapper characterSwapper;
+
     #endregion
 
     private void Awake()
@@ -71,6 +73,11 @@ public class enemyBehaviour : MonoBehaviour
 
     void Die()
     {
+        if (characterSwapper != null)
+        {
+            characterSwapper.OnHealthZero();
+        }
+
         Destroy(gameObject);
     }
 }

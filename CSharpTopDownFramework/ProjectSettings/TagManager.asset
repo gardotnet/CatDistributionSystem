@@ -7,6 +7,8 @@ TagManager:
   - Set Dressing
   - Enemy
   - Enemy Vision
+  - Hairball
+  - Friend
   layers:
   - Default
   - TransparentFX
