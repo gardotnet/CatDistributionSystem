@@ -1,9 +1,7 @@
 using System;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
-
 
 public class enemyBehaviour : MonoBehaviour
 {
@@ -24,7 +22,7 @@ public class enemyBehaviour : MonoBehaviour
     //[SerializeField] GameObject BombayFriend;
     //public string[] Variations; -> figure out how to list and use the different variations (listed above) interchangeably
 
-    private event Action<bool> OnEnemyDeath;
+    public UnityEvent<GameObject> OnEnemyDeath;
     public Transform enemyLocation;
 
     #endregion
@@ -32,6 +30,8 @@ public class enemyBehaviour : MonoBehaviour
     private void Awake()
     {
         healthBar = GetComponentInChildren<enemyHealthBar>();
+
+        OnEnemyDeath.AddListener(HandleEnemyDefeated);
     }
 
     private void Start()
@@ -43,6 +43,8 @@ public class enemyBehaviour : MonoBehaviour
 
     void Update()
     {
+
+        #region Enemy Vision Code 
         if (m_PlayerInSight && Vector2.Distance(transform.position, m_Player.position) >= m_stoppingDistance)
         {
             GetComponent<Rigidbody2D>().linearVelocity = (m_Player.position - transform.position) * (m_speed * Time.deltaTime);
@@ -53,7 +55,7 @@ public class enemyBehaviour : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D (Collider2D collision) 
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
@@ -61,13 +63,15 @@ public class enemyBehaviour : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D (Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             m_PlayerInSight = false;
         }
     }
+
+    #endregion
 
     public void TakeDamage(float damageAmount)
     {
@@ -76,14 +80,13 @@ public class enemyBehaviour : MonoBehaviour
 
         if (health <= 0)
         {
-            Die();
+            HandleEnemyDefeated(CalicoFriend);
         }
     }
 
-    void Die()
+    private void HandleEnemyDefeated(GameObject friend)
     {
-        OnEnemyDeath.Invoke(Instantiate(CalicoFriend, gameObject.transform.position, Quaternion.identity));
-
+        Instantiate(friend, transform.position, Quaternion.identity);
         gameObject.SetActive(false);
     }
 }

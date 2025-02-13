@@ -13241,6 +13241,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 375741778160764838, guid: 3a489e3a13f45c54494d46669e147728, type: 3}
+      propertyPath: maxHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 375741778160764838, guid: 3a489e3a13f45c54494d46669e147728, type: 3}
       propertyPath: BombayFriend
       value: 
       objectReference: {fileID: 1103929686726130753, guid: 2744ec999771a344d88c8c0433e96f03, type: 3}
@@ -13255,6 +13259,18 @@ PrefabInstance:
     - target: {fileID: 375741778160764838, guid: 3a489e3a13f45c54494d46669e147728, type: 3}
       propertyPath: lines.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 375741778160764838, guid: 3a489e3a13f45c54494d46669e147728, type: 3}
+      propertyPath: OnEnemyDeath.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 375741778160764838, guid: 3a489e3a13f45c54494d46669e147728, type: 3}
+      propertyPath: OnEnemyDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3092036735502131613, guid: 3a489e3a13f45c54494d46669e147728, type: 3}
+    - target: {fileID: 375741778160764838, guid: 3a489e3a13f45c54494d46669e147728, type: 3}
+      propertyPath: OnEnemyDeath.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3092036735502131613, guid: 3a489e3a13f45c54494d46669e147728, type: 3}
       propertyPath: m_Name
