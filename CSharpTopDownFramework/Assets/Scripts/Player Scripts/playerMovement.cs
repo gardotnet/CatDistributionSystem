@@ -2,11 +2,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
 
-/// <summary>
-/// A class to control the top down character.
-/// Implements the player controls for moving and shooting.
-/// Updates the player animator so the character animates based on input.
-/// </summary>
 public class playerMovement : MonoBehaviour
 {
     #region Variables
@@ -40,10 +35,6 @@ public class playerMovement : MonoBehaviour
 
     #endregion
 
-    /// <summary>
-    /// When the script first initialises this gets called.
-    /// Use this for grabbing components and setting up input bindings.
-    /// </summary>
     private void Awake()
     {
         m_moveAction = InputSystem.actions.FindAction("Move");
@@ -59,19 +50,12 @@ public class playerMovement : MonoBehaviour
         m_rigidbody = GetComponent<Rigidbody2D>();
     }
 
-    /// <summary>
-    /// Called after Awake(), and is used to initialize variables e.g. set values on the player
-    /// </summary>
     void Start()
     {
         transform.position = startingPosition.initialValue;
         walkingsfx = GetComponent<AudioSource>();
     }
 
-    /// <summary>
-    /// When a fixed update loop is called, it runs at a constant rate, regardless of pc performance.
-    /// This ensures that physics are calculated properly.
-    /// </summary>
     private void FixedUpdate()
     {
         //clamp the speed to the maximum speed for if the speed has been changed in code.
