@@ -22,7 +22,8 @@ public class enemyBehaviour : MonoBehaviour
     [Header("Friend Variations")]
     [SerializeField] List<GameObject> Friends;
 
-    private UnityEvent<List<GameObject>> OnEnemyDeath;
+    //When this is private, the Enemy Vision breaks?
+    public UnityEvent<List<GameObject>> OnEnemyDeath;
     public Transform enemyLocation;
 
     #endregion

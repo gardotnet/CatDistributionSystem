@@ -13147,6 +13147,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4082920122241333141, guid: f6e4a9a7b4f122b4e82da05a039a69d1, type: 3}
+      propertyPath: m_Pitch
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082920122241333141, guid: f6e4a9a7b4f122b4e82da05a039a69d1, type: 3}
       propertyPath: Priority
       value: 150
       objectReference: {fileID: 0}

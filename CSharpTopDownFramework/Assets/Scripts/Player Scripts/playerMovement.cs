@@ -81,12 +81,17 @@ public class playerMovement : MonoBehaviour
         m_rigidbody.linearVelocity = m_playerDirection * (speed * Time.fixedDeltaTime);
     }
 
+    private void OnDestroy()
+    {
+        m_moveAction.performed -= OnMove;
+        m_moveAction.canceled -= StopMove;
+    }
+
     #region Movement Handler Functions
-    
+
     public void OnMove(InputAction.CallbackContext context)
     {
         m_playerDirection = context.ReadValue<Vector2>();
-
 
         //should be somth else in here to check if null
         if (m_playerDirection != null)
@@ -109,7 +114,7 @@ public class playerMovement : MonoBehaviour
     {
         m_animator.SetFloat("Speed", m_playerDirection.magnitude);
 
-        if (m_playerDirection.magnitude > 0)
+        if (m_playerDirection.magnitude > 0 && m_playerDirection != null)
         {
             m_animator.SetFloat("Horizontal", m_playerDirection.x);
             m_animator.SetFloat("Vertical", m_playerDirection.y);
