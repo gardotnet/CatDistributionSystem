@@ -87,14 +87,22 @@ public class playerMovement : MonoBehaviour
     {
         m_playerDirection = context.ReadValue<Vector2>();
 
-        HandleAnimOnMove();
+
+        //should be somth else in here to check if null
+        if (m_playerDirection != null)
+        {
+            HandleAnimOnMove();
+        }
     }
 
     public void StopMove(InputAction.CallbackContext context)
     {
         m_playerDirection = Vector2.zero;
 
-        HandleAnimOnMove();
+        if (m_playerDirection != null)
+        {
+            HandleAnimOnMove();
+        }
     }
 
     private void HandleAnimOnMove()

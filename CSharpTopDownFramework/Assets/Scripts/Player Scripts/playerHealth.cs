@@ -16,7 +16,7 @@ public class playerHealth : MonoBehaviour
 
     void Start()
     {
-        playerdamagedsfx = GetComponent<AudioSource>();
+        playerdamagedsfx = GetComponents<AudioSource>()[1];
     }
 
     private void Update()

@@ -1,10 +1,13 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using NUnit.Framework;
 
 public class enemyBehaviour : MonoBehaviour
 {
+
     #region Variables
 
     public Transform m_Player;
@@ -17,12 +20,9 @@ public class enemyBehaviour : MonoBehaviour
     [SerializeField] float health, maxHealth = 3f;
 
     [Header("Friend Variations")]
-    [SerializeField] GameObject CalicoFriend;
-    //[SerializeField] GameObject GingerFriend;
-    //[SerializeField] GameObject BombayFriend;
-    //public string[] Variations; -> figure out how to list and use the different variations (listed above) interchangeably
+    [SerializeField] List<GameObject> Friends;
 
-    public UnityEvent<GameObject> OnEnemyDeath;
+    private UnityEvent<List<GameObject>> OnEnemyDeath;
     public Transform enemyLocation;
 
     #endregion
@@ -80,13 +80,13 @@ public class enemyBehaviour : MonoBehaviour
 
         if (health <= 0)
         {
-            HandleEnemyDefeated(CalicoFriend);
+            HandleEnemyDefeated(Friends);
         }
     }
 
-    private void HandleEnemyDefeated(GameObject friend)
+    private void HandleEnemyDefeated(List<GameObject> friends)
     {
-        Instantiate(friend, transform.position, Quaternion.identity);
+        Instantiate(friends[UnityEngine.Random.Range(0, friends.Count)], transform.position, Quaternion.identity);
         gameObject.SetActive(false);
     }
 }
