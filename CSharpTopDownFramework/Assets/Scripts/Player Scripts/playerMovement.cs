@@ -44,7 +44,6 @@ public class playerMovement : MonoBehaviour
         m_moveAction.canceled += StopMove;
         //m_attackAction.performed += OnAttack;
 
-
         //get components from Character game object so that we can use them later.
         m_animator = GetComponent<Animator>();
         m_rigidbody = GetComponent<Rigidbody2D>();

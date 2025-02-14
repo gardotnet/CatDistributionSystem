@@ -6,6 +6,8 @@ public class playerBehaviour : MonoBehaviour
     private InputAction m_moveAction;
     private InputAction m_attackAction;
 
+    bool allyContact = false;
+
     #region Projectile Variables
 
     [Header("Projectile parameters")]
@@ -55,6 +57,20 @@ public class playerBehaviour : MonoBehaviour
         if (projectileToSpawn.GetComponent<Rigidbody2D>() != null)
         {
             projectileToSpawn.GetComponent<Rigidbody2D>().linearVelocity = fireDirection * m_projectileSpeed;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Ally"))
+        {
+            allyContact = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Ally"))
+        {
+            allyContact = false;
         }
     }
 }

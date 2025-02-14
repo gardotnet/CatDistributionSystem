@@ -4,7 +4,7 @@ using TMPro;
 
 public class DialogueSystem : MonoBehaviour
 {
-    [Header ("Components")]
+    [Header("Components")]
     public GameObject dialogueBox;
     public GameObject dialogueLines;
     public TextMeshProUGUI textComponent;

@@ -24,7 +24,7 @@ public class enemyBehaviour : MonoBehaviour
 
     //When this is private, the Enemy Vision breaks?
     public UnityEvent<List<GameObject>> OnEnemyDeath;
-    public Transform enemyLocation;
+    private Transform enemyLocation;
 
     #endregion
 

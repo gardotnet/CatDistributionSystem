@@ -10,7 +10,7 @@ public class TypingText : MonoBehaviour
     public float textSpeed;
 
     private int index = 0;
-    private bool isTyping = false;
+    private bool isTyping = false; // -> This will throw a 'is assigned but its value is never used' warning, despite being used (?)
 
     void Start()
     {

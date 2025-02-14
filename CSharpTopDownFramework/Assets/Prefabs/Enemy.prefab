@@ -185,8 +185,10 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   health: 20
   maxHealth: 20
-  friendVariations:
-  - {fileID: 0}
+  Friends:
+  - {fileID: 1103929686726130753, guid: 2744ec999771a344d88c8c0433e96f03, type: 3}
+  - {fileID: 4727162256879165715, guid: fb46d1a111bc8b5488f04ad9abe761ee, type: 3}
+  - {fileID: 6667918874545502139, guid: b3aa84facece2284187d4012a34ce055, type: 3}
   OnEnemyDeath:
     m_PersistentCalls:
       m_Calls:

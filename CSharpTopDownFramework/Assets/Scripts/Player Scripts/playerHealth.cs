@@ -59,7 +59,7 @@ public class playerHealth : MonoBehaviour
         }
     }
 
-    //This doesn't get used anywhere, but still nice to have
+    //This doesn't get used anywhere, but still nice to have -> edit: add this to the npc friends so friendship heals u!!! or somth
     public void Healing(float healthPoints)
     {
         healthAmount += healthPoints;

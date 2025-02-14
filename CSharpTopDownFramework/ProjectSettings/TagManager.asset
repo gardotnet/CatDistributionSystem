@@ -9,6 +9,7 @@ TagManager:
   - Enemy Vision
   - Hairball
   - Friend
+  - Ally
   layers:
   - Default
   - TransparentFX
