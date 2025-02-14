@@ -13261,6 +13261,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 375741778160764838, guid: 3a489e3a13f45c54494d46669e147728, type: 3}
+      propertyPath: Friends.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 375741778160764838, guid: 3a489e3a13f45c54494d46669e147728, type: 3}
+      propertyPath: 'Friends.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1103929686726130753, guid: 2744ec999771a344d88c8c0433e96f03, type: 3}
+    - target: {fileID: 375741778160764838, guid: 3a489e3a13f45c54494d46669e147728, type: 3}
+      propertyPath: 'Friends.Array.data[1]'
+      value: 
+      objectReference: {fileID: 4727162256879165715, guid: fb46d1a111bc8b5488f04ad9abe761ee, type: 3}
+    - target: {fileID: 375741778160764838, guid: 3a489e3a13f45c54494d46669e147728, type: 3}
+      propertyPath: 'Friends.Array.data[2]'
+      value: 
+      objectReference: {fileID: 6667918874545502139, guid: b3aa84facece2284187d4012a34ce055, type: 3}
+    - target: {fileID: 375741778160764838, guid: 3a489e3a13f45c54494d46669e147728, type: 3}
       propertyPath: CalicoFriends.Array.size
       value: 3
       objectReference: {fileID: 0}
