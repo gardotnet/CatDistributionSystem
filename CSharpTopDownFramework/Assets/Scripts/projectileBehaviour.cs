@@ -6,6 +6,8 @@ public class projectileBehaviour : MonoBehaviour
     public GameObject Enemy;
     private AudioSource swoop;
 
+    [SerializeField] float ProjectileDamage;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.gameObject.CompareTag("Player") && !collision.gameObject.CompareTag("Enemy Vision"))
@@ -19,7 +21,7 @@ public class projectileBehaviour : MonoBehaviour
 
             if (enemyComponent != null)
             {
-                enemyComponent.TakeDamage(1);
+                enemyComponent.TakeDamage(ProjectileDamage);
                 Destroy(gameObject);
             }
         }
@@ -33,8 +35,6 @@ public class projectileBehaviour : MonoBehaviour
 ;
         swoop = GetComponent<AudioSource>();
         swoop.Play();
-
-        Destroy(gameObject, 1.0f);
     }
 
     private void OnBecameInvisible()
@@ -44,6 +44,6 @@ public class projectileBehaviour : MonoBehaviour
 
     void Update()
     {
-        Destroy(gameObject, 0.3f);
+        Destroy(gameObject, 2.5f);
     }
 }

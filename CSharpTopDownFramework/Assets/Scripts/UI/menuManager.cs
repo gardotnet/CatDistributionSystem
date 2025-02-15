@@ -20,10 +20,9 @@ public class menuManager : MonoBehaviour
         m_controlsPanelOpen = !m_controlsPanelOpen;
     }
 
-    public void LoadLevel1()
+    public void LoadLevel()
     {
-        //Can also use SceneManager.LoadScene(0); here
-        SceneManager.LoadScene("Interior Tutorial");
+        SceneManager.LoadScene(1);
     }
 
     public void Quit()

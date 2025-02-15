@@ -8,6 +8,6 @@ public class scoreUI : MonoBehaviour
 
     void Update()
     {
-        m_ScoreLabel.text = "Score: " + m_scoreSystem.m_score;
+        m_ScoreLabel.text = m_scoreSystem.m_score + "/6";
     }
 }

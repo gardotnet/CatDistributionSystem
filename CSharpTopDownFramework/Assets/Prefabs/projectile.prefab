@@ -405,3 +405,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 0}
   Enemy: {fileID: 0}
+  ProjectileDamage: 2

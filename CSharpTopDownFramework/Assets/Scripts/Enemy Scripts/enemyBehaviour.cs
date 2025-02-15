@@ -23,6 +23,8 @@ public class enemyBehaviour : MonoBehaviour
     [SerializeField] List<GameObject> Friends;
 
     public UnityEvent<List<GameObject>> OnEnemyDeath; //When this is private, the Enemy Vision breaks?
+    public UnityEvent onEnemyConverted;
+
     private Transform enemyLocation;
 
     #endregion
@@ -86,6 +88,7 @@ public class enemyBehaviour : MonoBehaviour
 
     private void HandleEnemyDefeated(List<GameObject> friends)
     {
+        onEnemyConverted.Invoke();
         Instantiate(friends[UnityEngine.Random.Range(0, friends.Count)], transform.position, Quaternion.identity);
         gameObject.SetActive(false);
     }

@@ -40,16 +40,17 @@ public class TypingText : MonoBehaviour
 
     void NextLine()
     {
+        if (isTyping) return;
+
         if (index < lines.Length - 1)
         {
             index++;
-            textComponent.text += string.Empty;
-            StartCoroutine (TypeLine());
+            textComponent.text = string.Empty;
+            StartCoroutine(TypeLine());
         }
         else
         {
             gameObject.SetActive(false);
         }
     }
-
 }
