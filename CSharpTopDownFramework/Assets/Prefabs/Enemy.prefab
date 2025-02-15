@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Player: {fileID: 0}
-  m_speed: 500
+  m_speed: 250
   m_stoppingDistance: 0
   healthBar: {fileID: 0}
   health: 20
@@ -204,7 +204,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  enemyLocation: {fileID: 0}
 --- !u!1 &4134295493835280190
 GameObject:
   m_ObjectHideFlags: 0

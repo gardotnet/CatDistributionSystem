@@ -5,17 +5,15 @@ public class allyBehaviour : MonoBehaviour
 {
     bool playerContact = false;
     public UnityEvent onPlayerInteraction;
-    
-    void Start()
-    {
-        
-    }
 
-    
+    private DialogueSystem dialogueSystem;
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E)) TriggerConversation();
-
+        if (Input.GetKeyDown(KeyCode.E) && playerContact)
+        {
+            TriggerConversation();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -28,6 +26,6 @@ public class allyBehaviour : MonoBehaviour
 
     void TriggerConversation()
     {
-
+        onPlayerInteraction.Invoke();
     }
 }

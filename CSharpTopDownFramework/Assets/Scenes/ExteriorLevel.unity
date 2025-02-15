@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 42592476}
   - component: {fileID: 42592475}
   - component: {fileID: 42592478}
+  - component: {fileID: 42592479}
   m_Layer: 0
   m_Name: Oscar and Toby
   m_TagString: Untagged
@@ -231,8 +232,7 @@ Transform:
   m_LocalPosition: {x: -14.427, y: 2.119, z: 0.088089116}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 307653068}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &42592478
@@ -271,6 +271,33 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 1
+--- !u!114 &42592479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42592474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec3219f7817d794594d76eb55f0e571, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPlayerInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 307653070}
+        m_TargetAssemblyTypeName: DialogueSystem, Assembly-CSharp
+        m_MethodName: HandleDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &150231960
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,6 +1254,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1063048812}
+  - {fileID: 307653068}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1246,7 +1274,7 @@ GameObject:
   - component: {fileID: 307653072}
   - component: {fileID: 307653071}
   - component: {fileID: 307653070}
-  - component: {fileID: 307653069}
+  - component: {fileID: 307653073}
   m_Layer: 5
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -1262,41 +1290,19 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307653067}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 89.91191}
-  m_LocalScale: {x: 0.01086855, y: 0.0040014787, z: 0.003556963}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.7214, y: 0.26559815, z: 0.23609342}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1291815142}
   - {fileID: 607071453}
-  m_Father: {fileID: 42592477}
+  m_Father: {fileID: 159534415}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 16.437, y: -3.026596}
+  m_AnchoredPosition: {x: 0.00001335144, y: 101.2}
   m_SizeDelta: {x: 344, y: 194}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &307653069
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 307653067}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 43f68761d949e6646bd53577da1092e3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &307653070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1311,6 +1317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 307653067}
   dialogueLines: {fileID: 607071452}
+  dialoguePortrait: {fileID: 1291815141}
   textComponent: {fileID: 607071454}
   textSpeed: 0.02
   lines:
@@ -1354,6 +1361,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307653067}
   m_CullTransparentMesh: 1
+--- !u!95 &307653073
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307653067}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c494a2076c43f1541933d2a1f4ab2155, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &363614486
 GameObject:
   m_ObjectHideFlags: 0
@@ -13395,6 +13424,7 @@ GameObject:
   - component: {fileID: 1291815142}
   - component: {fileID: 1291815144}
   - component: {fileID: 1291815143}
+  - component: {fileID: 1291815145}
   m_Layer: 0
   m_Name: DialoguePortrait
   m_TagString: Untagged
@@ -13459,6 +13489,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1291815141}
   m_CullTransparentMesh: 1
+--- !u!95 &1291815145
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291815141}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1661916711
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ public class DialogueSystem : MonoBehaviour
     [Header("Components")]
     public GameObject dialogueBox;
     public GameObject dialogueLines;
+    public GameObject dialoguePortrait;
     public TextMeshProUGUI textComponent;
     public float textSpeed;
 
@@ -19,20 +20,17 @@ public class DialogueSystem : MonoBehaviour
     {
         dialogueBox.GetComponent<CanvasRenderer>().SetAlpha(0f);
         dialogueLines.GetComponent<CanvasRenderer>().SetAlpha(0f);
+        dialoguePortrait.GetComponent<CanvasRenderer>().SetAlpha(0f);
         textComponent.text = string.Empty;
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E)) HandleDialogue();
-    }
-
-    void HandleDialogue()
+    public void HandleDialogue()
     {
         if (dialogueBox.GetComponent<CanvasRenderer>().GetAlpha() == 0f)
         {
             dialogueBox.GetComponent<CanvasRenderer>().SetAlpha(1f);
             dialogueLines.GetComponent<CanvasRenderer>().SetAlpha(1f);
+            dialoguePortrait.GetComponent<CanvasRenderer>().SetAlpha(1f);
             StartCoroutine(TypeLine());
         }
         else if (!isTyping)
@@ -67,5 +65,6 @@ public class DialogueSystem : MonoBehaviour
     {
         dialogueBox.GetComponent<CanvasRenderer>().SetAlpha(0f);
         dialogueLines.GetComponent<CanvasRenderer>().SetAlpha(0f);
+        dialoguePortrait.GetComponent<CanvasRenderer>().SetAlpha(0f);
     }
 }
