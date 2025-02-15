@@ -24,6 +24,14 @@ public class allyBehaviour : MonoBehaviour
         }
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            playerContact = false;
+        }
+    }
+
     void TriggerConversation()
     {
         onPlayerInteraction.Invoke();

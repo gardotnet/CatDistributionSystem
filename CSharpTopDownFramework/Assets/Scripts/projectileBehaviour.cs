@@ -34,7 +34,7 @@ public class projectileBehaviour : MonoBehaviour
         swoop = GetComponent<AudioSource>();
         swoop.Play();
 
-        Destroy(gameObject, 2.0f);
+        Destroy(gameObject, 1.0f);
     }
 
     private void OnBecameInvisible()
@@ -42,9 +42,8 @@ public class projectileBehaviour : MonoBehaviour
         Destroy(gameObject);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        Destroy(gameObject, 0.6f);
+        Destroy(gameObject, 0.3f);
     }
 }

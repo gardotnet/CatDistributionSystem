@@ -166,7 +166,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.4902296
+  m_Radius: 4.0186706
 --- !u!114 &375741778160764838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,11 +180,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Player: {fileID: 0}
-  m_speed: 250
+  m_speed: 500
   m_stoppingDistance: 0
   healthBar: {fileID: 0}
   health: 20
-  maxHealth: 20
+  maxHealth: 40
   Friends:
   - {fileID: 1103929686726130753, guid: 2744ec999771a344d88c8c0433e96f03, type: 3}
   - {fileID: 4727162256879165715, guid: fb46d1a111bc8b5488f04ad9abe761ee, type: 3}

@@ -9,6 +9,7 @@ public class DialogueSystem : MonoBehaviour
     public GameObject dialogueLines;
     public GameObject dialoguePortrait;
     public TextMeshProUGUI textComponent;
+    private AudioSource dialogueMeepSFX;
     public float textSpeed;
 
     public string[] lines;
@@ -21,6 +22,7 @@ public class DialogueSystem : MonoBehaviour
         dialogueBox.GetComponent<CanvasRenderer>().SetAlpha(0f);
         dialogueLines.GetComponent<CanvasRenderer>().SetAlpha(0f);
         dialoguePortrait.GetComponent<CanvasRenderer>().SetAlpha(0f);
+        dialogueMeepSFX = GetComponent<AudioSource>();
         textComponent.text = string.Empty;
     }
 
@@ -49,6 +51,7 @@ public class DialogueSystem : MonoBehaviour
 
     IEnumerator TypeLine()
     {
+        dialogueMeepSFX.Play();
         isTyping = true;
         textComponent.text = string.Empty;
 
