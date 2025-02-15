@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.Events;
+using System.Collections.Generic;
 
 public class allyBehaviour : MonoBehaviour
 {
     bool playerContact = false;
     public UnityEvent onPlayerInteraction;
+    [SerializeField] List<GameObject> DialogueBoxes;
 
     private DialogueSystem dialogueSystem;
 

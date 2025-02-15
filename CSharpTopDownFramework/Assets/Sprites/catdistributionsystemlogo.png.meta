@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: 416dc00700ba9d9489f77c862f01c733
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2552966873916870333
+    second: catdistributionsystemlogo_0
+  - first:
+      213: -6155949415781554843
+    second: catdistributionsystemlogo_1
+  - first:
+      213: 6271911661155426617
+    second: catdistributionsystemlogo_2
+  - first:
+      213: -3927920207311610351
+    second: catdistributionsystemlogo_3
+  - first:
+      213: 1377254804775441468
+    second: catdistributionsystemlogo_4
+  - first:
+      213: -1120932891128654338
+    second: catdistributionsystemlogo_5
+  - first:
+      213: -7439670924220470645
+    second: catdistributionsystemlogo_6
+  - first:
+      213: 5661918670278425362
+    second: catdistributionsystemlogo_7
+  - first:
+      213: -7478479278153978225
+    second: catdistributionsystemlogo_8
+  - first:
+      213: 7585878105821834748
+    second: catdistributionsystemlogo_9
+  - first:
+      213: -2715415428897253127
+    second: catdistributionsystemlogo_10
+  - first:
+      213: 7369627904468676462
+    second: catdistributionsystemlogo_11
+  - first:
+      213: -7607931243640927070
+    second: catdistributionsystemlogo_12
+  - first:
+      213: 3636895708008365073
+    second: catdistributionsystemlogo_13
+  - first:
+      213: 6452416921362473325
+    second: catdistributionsystemlogo_14
+  - first:
+      213: 8167869139785452815
+    second: catdistributionsystemlogo_15
+  - first:
+      213: 7637575368717691154
+    second: catdistributionsystemlogo_16
+  - first:
+      213: -1433787279794393756
+    second: catdistributionsystemlogo_17
+  - first:
+      213: 2915038792209153747
+    second: catdistributionsystemlogo_18
+  - first:
+      213: -7557885094583449665
+    second: catdistributionsystemlogo_19
+  - first:
+      213: 1635355276923465525
+    second: catdistributionsystemlogo_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 240
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: catdistributionsystemlogo_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 41
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34178d4872a029cd0800000000000000
+      internalID: -2552966873916870333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catdistributionsystemlogo_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 41
+        width: 6
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56521193f9ca19aa0800000000000000
+      internalID: -6155949415781554843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catdistributionsystemlogo_2
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 41
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 931acc10d6e4a0750800000000000000
+      internalID: 6271911661155426617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catdistributionsystemlogo_3
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 41
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11edc19e1693d79c0800000000000000
+      internalID: -3927920207311610351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catdistributionsystemlogo_4
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 41
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3417dba2fdfc1310800000000000000
+      internalID: 1377254804775441468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catdistributionsystemlogo_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 41
+        width: 6
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef599377975a170f0800000000000000
+      internalID: -1120932891128654338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catdistributionsystemlogo_6
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 41
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8a690426baf0c890800000000000000
+      internalID: -7439670924220470645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catdistributionsystemlogo_7
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 62
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21bf811580d239e40800000000000000
+      internalID: 5661918670278425362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catdistributionsystemlogo_8
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 41
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8e238d18ba173890800000000000000
+      internalID: -7478479278153978225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catdistributionsystemlogo_9
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 41
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfd6cee02f3764960800000000000000
+      internalID: 7585878105821834748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catdistributionsystemlogo_10
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 62
+        width: 21
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f8d6f6ed08e05ad0800000000000000
+      internalID: -2715415428897253127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catdistributionsystemlogo_11
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 41
+        width: 6
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6f69ac788d264660800000000000000
+      internalID: 7369627904468676462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catdistributionsystemlogo_12
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 41
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2accf2ba7d23b6690800000000000000
+      internalID: -7607931243640927070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catdistributionsystemlogo_13
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 62
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11c3bf89069d87230800000000000000
+      internalID: 3636895708008365073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catdistributionsystemlogo_14
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 41
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d61a78ce0079b8950800000000000000
+      internalID: 6452416921362473325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catdistributionsystemlogo_15
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 41
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0d89c815b91a5170800000000000000
+      internalID: 8167869139785452815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catdistributionsystemlogo_16
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 41
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 219e0bd055e1ef960800000000000000
+      internalID: 7637575368717691154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catdistributionsystemlogo_17
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 41
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46da168c01a2a1ce0800000000000000
+      internalID: -1433787279794393756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catdistributionsystemlogo_18
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 41
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3de3c14465c447820800000000000000
+      internalID: 2915038792209153747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catdistributionsystemlogo_19
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 41
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb74224cc8ffc1790800000000000000
+      internalID: -7557885094583449665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: catdistributionsystemlogo_20
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 41
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53f659ab5f2f1b610800000000000000
+      internalID: 1635355276923465525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      catdistributionsystemlogo_0: -2552966873916870333
+      catdistributionsystemlogo_1: -6155949415781554843
+      catdistributionsystemlogo_10: -2715415428897253127
+      catdistributionsystemlogo_11: 7369627904468676462
+      catdistributionsystemlogo_12: -7607931243640927070
+      catdistributionsystemlogo_13: 3636895708008365073
+      catdistributionsystemlogo_14: 6452416921362473325
+      catdistributionsystemlogo_15: 8167869139785452815
+      catdistributionsystemlogo_16: 7637575368717691154
+      catdistributionsystemlogo_17: -1433787279794393756
+      catdistributionsystemlogo_18: 2915038792209153747
+      catdistributionsystemlogo_19: -7557885094583449665
+      catdistributionsystemlogo_2: 6271911661155426617
+      catdistributionsystemlogo_20: 1635355276923465525
+      catdistributionsystemlogo_3: -3927920207311610351
+      catdistributionsystemlogo_4: 1377254804775441468
+      catdistributionsystemlogo_5: -1120932891128654338
+      catdistributionsystemlogo_6: -7439670924220470645
+      catdistributionsystemlogo_7: 5661918670278425362
+      catdistributionsystemlogo_8: -7478479278153978225
+      catdistributionsystemlogo_9: 7585878105821834748
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
