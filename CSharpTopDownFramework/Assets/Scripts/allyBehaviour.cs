@@ -6,15 +6,17 @@ public class allyBehaviour : MonoBehaviour
 {
     bool playerContact = false;
     public UnityEvent onPlayerInteraction;
-    [SerializeField] List<GameObject> DialogueBoxes;
 
     private DialogueSystem dialogueSystem;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && playerContact)
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            TriggerConversation();
+            if (playerContact == true)
+            {
+                TriggerConversation();
+            }
         }
     }
 
