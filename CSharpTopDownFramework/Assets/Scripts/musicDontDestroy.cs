@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MusicDontDestroy : MonoBehaviour
 {
-    bool musicPlaying = false;
+    static bool musicPlaying = false;
 
     void Awake()
     {
