@@ -31,9 +31,7 @@ public class enemyBehaviour : MonoBehaviour
 
     private void Awake()
     {
-        healthBar = GetComponentInChildren<enemyHealthBar>();
-
-        OnEnemyDeath.AddListener(HandleEnemyDefeated);
+        healthBar = GetComponentInChildren<enemyHealthBar>();;
     }
 
     private void Start()

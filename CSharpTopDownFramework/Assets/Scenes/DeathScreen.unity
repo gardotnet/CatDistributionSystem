@@ -177,8 +177,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d6cb1ece7eb92644da03155a7ee8cf05, type: 2}
-  m_sharedMaterial: {fileID: -3560585313992236058, guid: d6cb1ece7eb92644da03155a7ee8cf05, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 214d4f1b91816244cbe1e9359a112fdf, type: 2}
+  m_sharedMaterial: {fileID: 2726327983811205341, guid: 214d4f1b91816244cbe1e9359a112fdf, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -202,8 +202,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5385,7 +5385,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 187665855}
         m_TargetAssemblyTypeName: menuManager, Assembly-CSharp
-        m_MethodName: Quit
+        m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5759,7 +5759,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -7.600006, y: 1.3999023}
+  m_AnchoredPosition: {x: -7.600006, y: -2}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &728809539
@@ -5809,12 +5809,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
+  m_fontSize: 15
   m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 10
-  m_fontSizeMax: 10
+  m_fontSizeMin: 15
+  m_fontSizeMax: 15
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -5945,7 +5945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 19540431}
   lines:
-  - You died. Try again?
+  - YOU DIED. Try again?
   textSpeed: 0.15
 --- !u!1001 &1627719945
 PrefabInstance:
@@ -6053,7 +6053,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 6f0a5b39299b1ad45be691e4602a77cf, type: 3}
   m_Resource: {fileID: 8300000, guid: 6f0a5b39299b1ad45be691e4602a77cf, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.4
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6324,12 +6324,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10.5
+  m_fontSize: 12
   m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 10
-  m_fontSizeMax: 10.5
+  m_fontSizeMin: 12
+  m_fontSizeMax: 12
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
